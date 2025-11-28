@@ -6,7 +6,6 @@
     <title>Forum - Tracer Study UAD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
@@ -401,7 +400,6 @@
             z-index: 1;
         }
         
-        /* MODIFIKASI: Podium Styles untuk Top Alumni - DITURUNKAN */
         .podium-container {
             margin: 10px 0 20px 0;
             position: relative;
@@ -441,26 +439,26 @@
         }
         
         .podium-1 .podium-stand {
-            height: 120px; /* Dikurangi dari 120px */
+            height: 120px; 
             background: linear-gradient(135deg, #ffd700, #ffed4e);
             width: 100px;
         }
         
         .podium-2 .podium-stand {
-            height: 100px; /* Dikurangi dari 100px */
+            height: 100px; 
             background: linear-gradient(135deg, #c0c0c0, #e8e8e8);
             width: 90px;
         }
         
         .podium-3 .podium-stand {
-            height: 80px; /* Dikurangi dari 80px */
+            height: 80px; 
             background: linear-gradient(135deg, #cd7f32, #e6a756);
             width: 90px;
         }
         
         .podium-content {
             position: absolute;
-            top: -50px; /* Dikurangi dari -50px */
+            top: -50px; 
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
@@ -490,7 +488,7 @@
         
         .crown {
             position: absolute;
-            top: -25px; /* Dikurangi dari -25px */
+            top: -25px; 
             left: 50%;
             transform: translateX(-50%);
             font-size: 1.5rem;
@@ -529,7 +527,6 @@
             font-size: 0.8rem;
         }
         
-        /* MODIFIKASI: Comment Dialog Styles */
         .comment-dialog {
             display: none;
             position: fixed;
@@ -649,7 +646,6 @@
             cursor: pointer;
         }
         
-        /* MODIFIKASI: Improved Report Modal */
         .report-reason-details {
             display: none;
             margin-top: 10px;
@@ -664,7 +660,6 @@
             resize: vertical;
         }
         
-        /* MODIFIKASI: Tombol Leaderboard */
         .leaderboard-btn {
             margin-top: 15px;
             width: 100%;
@@ -681,7 +676,6 @@
             background-color: var(--secondary-blue);
         }
         
-        /* MODIFIKASI: Lightbox Styles */
         .lightbox {
             display: none;
             position: fixed;
@@ -801,8 +795,6 @@
                     
                     <!-- Right Navigation -->
                     <div class="d-flex align-items-center">
-                        <!-- Tombol Posting dihapus -->
-                        
                         <div class="dropdown me-3">
                             <button class="btn btn-outline-secondary position-relative" type="button" 
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -921,7 +913,6 @@
             </div>
             
             <div class="col-lg-6">
-                <!-- Post 1 (Text only) -->
                 <div class="post-card p-4 mb-4" data-aos="fade-up" id="post1">
                     <div class="d-flex justify-content-between align-items-start mb-3">
                         <div class="d-flex align-items-center">
@@ -976,7 +967,6 @@
                     </div>
                 </div>
                 
-                <!-- Post 2 (With image) -->
                 <div class="post-card p-4 mb-4" data-aos="fade-up" data-aos-delay="100" id="post2">
                     <div class="d-flex justify-content-between align-items-start mb-3">
                         <div class="d-flex align-items-center">
@@ -1049,13 +1039,11 @@
                     </div>
                 </div>
                 
-                <!-- MODIFIKASI: Top 3 Alumni Leaderboard - DITURUNKAN DAN DITAMBAH TOMBOL -->
                 <div class="info-box p-4" data-aos="fade-left" data-aos-delay="100">
                     <h6 class="fw-bold mb-3">Top 3 Alumni Paling Aktif</h6><br><br>
                     
                     <div class="podium-container">
                         <div class="podium">
-                            <!-- Second Place -->
                             <div class="podium-place podium-2">
                                 <div class="podium-stand">
                                     <div class="podium-content">
@@ -1067,7 +1055,6 @@
                                 <div class="place-badge">2nd</div>
                             </div>
                             
-                            <!-- First Place -->
                             <div class="podium-place podium-1">
                                 <div class="crown">
                                     <i class="fas fa-crown"></i>
@@ -1082,7 +1069,6 @@
                                 <div class="place-badge">1st</div>
                             </div>
                             
-                            <!-- Third Place -->
                             <div class="podium-place podium-3">
                                 <div class="podium-stand">
                                     <div class="podium-content">
@@ -1100,7 +1086,6 @@
                         <small class="text-muted">Total points berdasarkan kontribusi di platform</small>
                     </div>
                     
-                    <!-- MODIFIKASI: Tombol Leaderboard -->
                     <button class="leaderboard-btn" onclick="navigateToLeaderboard()">
                         <i class="fas fa-crown me-2"></i> Lihat Leaderboard Lengkap
                     </button>
@@ -1109,7 +1094,6 @@
         </div>
     </div>
 
-    <!-- MODIFIKASI: Comment Dialog -->
     <div class="comment-dialog" id="commentDialog">
         <div class="comment-container">
             <div class="comment-header">
@@ -1131,7 +1115,6 @@
         </div>
     </div>
 
-    <!-- MODIFIKASI: Lightbox untuk gambar -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" onclick="closeLightbox()">
             <i class="fas fa-times"></i>
@@ -1148,7 +1131,6 @@
         </div>
     </div>
 
-    <!-- MODIFIKASI: Improved Report Modal -->
     <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1219,7 +1201,6 @@
         </div>
     </div>
 
-    <!-- Toast Notifications -->
     <div class="toast-container position-fixed top-0 end-0 p-3">
         <div id="bookmarkToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -1245,10 +1226,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inisialisasi AOS
         AOS.init({
             duration: 600,
             once: true,

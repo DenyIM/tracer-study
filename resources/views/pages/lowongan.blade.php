@@ -6,7 +6,6 @@
     <title>Software Engineer - PT Maju Jaya Teknologi | Tracer Study UAD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
@@ -34,7 +33,6 @@
             color: var(--accent-yellow) !important;
         }
         
-        /* Navbar Styles */
         .navbar-brand {
             font-weight: 700;
         }
@@ -53,7 +51,6 @@
             font-weight: 600;
         }
         
-        /* Notification Badge */
         .notification-badge {
             position: absolute;
             top: -5px;
@@ -69,7 +66,6 @@
             justify-content: center;
         }
         
-        /* Job Header */
         .job-header-section {
             background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
             color: white;
@@ -103,7 +99,6 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        /* Main Content */
         .main-content {
             margin-top: -30px;
             position: relative;
@@ -128,7 +123,6 @@
             padding: 25px;
         }
         
-        /* Quick Info Section */
         .quick-info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -156,7 +150,6 @@
             color: var(--primary-blue);
         }
         
-        /* Salary Card */
         .salary-card {
             background: linear-gradient(135deg, var(--light-yellow), #fff9e6);
             border: 2px solid var(--accent-yellow);
@@ -184,7 +177,6 @@
             font-size: 0.9rem;
         }
         
-        /* Requirements List */
         .requirements-list {
             list-style: none;
             padding: 0;
@@ -205,7 +197,6 @@
             font-weight: bold;
         }
         
-        /* Action Buttons */
         .action-buttons {
             position: sticky;
             bottom: 0;
@@ -254,7 +245,6 @@
             transform: scale(1.1);
         }
         
-        /* Alumni Benefits */
         .alumni-benefits {
             background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
             color: white;
@@ -281,7 +271,6 @@
             font-size: 1.1rem;
         }
         
-        /* Related Jobs */
         .related-job-card {
             background: white;
             border-radius: 10px;
@@ -297,7 +286,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.12);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .quick-info-grid {
                 grid-template-columns: 1fr;
@@ -358,7 +346,6 @@
                             <i class="fas fa-plus-circle me-1"></i> Posting
                         </button>
                         
-                        <!-- Notification Dropdown - IMPROVED -->
                         <div class="dropdown me-3">
                             <button class="btn btn-outline-secondary position-relative" type="button" 
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -451,7 +438,6 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-md-end">
-                    <!-- Kartu gaji di header telah dihapus sesuai permintaan -->
                 </div>
             </div>
         </div>
@@ -460,9 +446,7 @@
     <!-- Main Content -->
     <div class="container main-container">
         <div class="row">
-            <!-- Left Content -->
             <div class="col-lg-8">
-                <!-- Quick Info Grid -->
                 <div class="quick-info-grid" data-aos="fade-up">
                     <div class="info-item">
                         <div class="info-label"><i class="fas fa-map-marker-alt me-2"></i>Lokasi</div>
@@ -484,14 +468,12 @@
                         <div class="info-label"><i class="fas fa-hourglass-end me-2"></i>Deadline</div>
                         <div class="info-value">30 November 2025</div>
                     </div>
-                    <!-- Mengganti data "Dilihat" dengan data gaji -->
                     <div class="info-item">
                         <div class="info-label"><i class="fas fa-money-bill-wave me-2"></i>Gaji</div>
                         <div class="info-value">Rp 6-10 Juta</div>
                     </div>
                 </div>
 
-                <!-- Job Description -->
                 <div class="job-detail-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-header-custom">
                         <h4 class="mb-0"><i class="fas fa-file-alt me-2"></i>Deskripsi Pekerjaan</h4>
@@ -523,7 +505,6 @@
                     </div>
                 </div>
 
-                <!-- Requirements -->
                 <div class="job-detail-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="card-header-custom">
                         <h4 class="mb-0"><i class="fas fa-list-check me-2"></i>Kualifikasi & Persyaratan</h4>
@@ -558,7 +539,6 @@
                     </div>
                 </div>
 
-                <!-- Company Information -->
                 <div class="job-detail-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-header-custom">
                         <h4 class="mb-0"><i class="fas fa-building me-2"></i>Tentang Perusahaan</h4>
@@ -604,9 +584,7 @@
                 </div>
             </div>
 
-            <!-- Right Sidebar -->
             <div class="col-lg-4">
-                <!-- Application Info -->
                 <div class="job-detail-card" data-aos="fade-left">
                     <div class="card-header-custom">
                         <h5 class="mb-0"><i class="fas fa-paper-plane me-2"></i>Cara Melamar</h5>
@@ -642,7 +620,6 @@
                     </div>
                 </div>
 
-                <!-- Related Jobs -->
                 <div class="job-detail-card" data-aos="fade-left" data-aos-delay="100">
                     <div class="card-header-custom">
                         <h5 class="mb-0"><i class="fas fa-briefcase me-2"></i>Lowongan Serupa</h5>
@@ -686,7 +663,6 @@
         </div>
     </div>
 
-    <!-- Action Buttons -->
     <div class="action-buttons" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
@@ -714,10 +690,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inisialisasi AOS
         AOS.init({
             duration: 600,
             once: true,

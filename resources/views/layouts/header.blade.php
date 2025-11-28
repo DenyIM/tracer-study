@@ -16,7 +16,7 @@
                     <!-- Main Navigation -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/nav-kuesioner"><i class="fas fa-clipboard-list me-1"></i> Kuesioner</a>
+                            <a class="nav-link" href="nav-kuesioner"><i class="fas fa-clipboard-list me-1"></i> Kuesioner</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="nav-leaderboard"><i class="fas fa-crown me-1"></i> Leaderboard</a>

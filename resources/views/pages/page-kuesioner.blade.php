@@ -7,7 +7,6 @@
     <title>Kuesioner - Tracer Study UAD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
@@ -41,14 +40,12 @@
             color: var(--accent-yellow) !important;
         }
 
-        /* Header Styles */
         .questionnaire-header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 15px 0;
         }
 
-        /* Progress Section */
         .progress-section {
             background: white;
             border-radius: 12px;
@@ -64,7 +61,6 @@
             background-color: var(--accent-yellow);
         }
 
-        /* Question Card Styles */
         .question-card {
             background: white;
             border-radius: 12px;
@@ -85,7 +81,6 @@
             font-size: 1.1rem;
         }
 
-        /* Question Navigation */
         .question-nav-card {
             background: white;
             border-radius: 12px;
@@ -115,6 +110,16 @@
             font-weight: 500;
         }
 
+        .question-nav-item.locked {
+            cursor: not-allowed;
+            opacity: 0.6;
+            background-color: #f8f9fa;
+        }
+
+        .question-nav-item.locked:hover {
+            background-color: #f8f9fa;
+        }
+
         .nav-status {
             width: 20px;
             height: 20px;
@@ -140,7 +145,11 @@
             color: white;
         }
 
-        /* Answer Options */
+        .nav-status.locked {
+            background-color: #dc3545;
+            color: white;
+        }
+
         .answer-option {
             padding: 15px;
             border: 2px solid #eaeaea;
@@ -160,7 +169,6 @@
             background-color: var(--light-yellow);
         }
 
-        /* Button Groups */
         .btn-group-left {
             display: flex;
             gap: 10px;
@@ -174,12 +182,10 @@
             justify-content: flex-end;
         }
 
-        /* Form Styles */
         .form-section {
             margin-bottom: 20px;
         }
 
-        /* Footer Styles */
         .footer {
             background-color: var(--primary-blue);
             color: white;
@@ -188,7 +194,6 @@
             text-align: center;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .question-nav-card {
                 margin-bottom: 20px;
@@ -228,7 +233,6 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="container py-4">
-            <!-- Progress Bar -->
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="progress-section p-3">
@@ -244,7 +248,6 @@
             </div>
 
             <div class="row">
-                <!-- Question Navigation -->
                 <div class="col-lg-4 mb-4" data-aos="fade-right">
                     <div class="question-nav-card p-3">
                         <h5 class="fw-bold mb-3" style="color: var(--primary-blue);">Daftar Pertanyaan</h5>
@@ -371,7 +374,6 @@
                     </div>
                 </div>
 
-                <!-- Question Content -->
                 <div class="col-lg-8" data-aos="fade-left">
                     <div class="question-card p-4">
                         <div class="d-flex align-items-start mb-4">
@@ -382,14 +384,11 @@
                             </div>
                         </div>
 
-                        <!-- Dynamic Answer Area -->
                         <div id="dynamicAnswerArea">
                             <!-- Area ini akan diisi secara dinamis berdasarkan tipe pertanyaan -->
                         </div>
 
-                        <!-- Navigation Buttons -->
                         <div class="d-flex justify-content-between align-items-center pt-3 navigation-buttons">
-                            <!-- Left Button Group -->
                             <div class="btn-group-left">
                                 <button class="btn btn-outline-secondary" id="backToMainBtn">
                                     <i class="fas fa-home me-2"></i> Kembali ke Halaman Utama
@@ -399,7 +398,6 @@
                                 </button>
                             </div>
 
-                            <!-- Right Button Group - DYNAMIC -->
                             <div class="btn-group-right" id="dynamicButtonGroup">
                                 <!-- Tombol akan diisi secara dinamis -->
                             </div>
@@ -418,10 +416,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inisialisasi AOS
         AOS.init({
             duration: 800,
             once: true,
@@ -431,6 +427,7 @@
         // Konfigurasi
         const TOTAL_QUESTIONS = 10;
         let currentQuestionId = 10; // Sedang di pertanyaan terakhir
+        let highestAnsweredQuestion = 10; // Pertanyaan tertinggi yang sudah dijawab
 
         // Data pertanyaan yang lebih lengkap dengan tipe yang berbeda-beda
         const questions = {
@@ -831,11 +828,18 @@
             document.getElementById('progressPercent').textContent = progressPercentText;
         }
 
-        // Question navigation functionality
+        // MODIFIKASI: Question navigation functionality dengan pembatasan
         document.querySelectorAll('.question-nav-item').forEach(item => {
             item.addEventListener('click', function () {
                 const questionId = parseInt(this.getAttribute('data-question-id'));
-                navigateToQuestion(questionId);
+                
+                // Cek apakah pertanyaan ini sudah dijawab atau tidak
+                if (questionId <= highestAnsweredQuestion) {
+                    navigateToQuestion(questionId);
+                } else {
+                    // Tampilkan pesan bahwa pertanyaan belum bisa diakses
+                    showNotification('Anda harus menyelesaikan pertanyaan sebelumnya terlebih dahulu', 'warning');
+                }
             });
         });
 
@@ -860,10 +864,10 @@
             document.getElementById('currentQuestionDescription').textContent = question.description;
         }
 
-        // Function to update navigation states
+        // MODIFIKASI: Function to update navigation states dengan status locked
         function updateNavigationStates(questionId) {
             document.querySelectorAll('.question-nav-item').forEach(navItem => {
-                navItem.classList.remove('active', 'current');
+                navItem.classList.remove('active', 'current', 'locked');
                 
                 const statusIcon = navItem.querySelector('.nav-status');
                 const itemQuestionId = parseInt(navItem.getAttribute('data-question-id'));
@@ -876,6 +880,11 @@
                     navItem.classList.add('current');
                     statusIcon.className = 'nav-status current me-3';
                     statusIcon.innerHTML = '<i class="fas fa-pen"></i>';
+                } else if (itemQuestionId > highestAnsweredQuestion) {
+                    // Pertanyaan yang belum bisa diakses
+                    navItem.classList.add('locked');
+                    statusIcon.className = 'nav-status locked me-3';
+                    statusIcon.innerHTML = '<i class="fas fa-lock"></i>';
                 } else {
                     navItem.classList.remove('answered');
                     statusIcon.className = 'nav-status pending me-3';
@@ -898,6 +907,10 @@
 
         function goToNextQuestion() {
             if (currentQuestionId < TOTAL_QUESTIONS) {
+                // Update highestAnsweredQuestion jika user menjawab pertanyaan baru
+                if (currentQuestionId === highestAnsweredQuestion) {
+                    highestAnsweredQuestion = currentQuestionId + 1;
+                }
                 navigateToQuestion(currentQuestionId + 1);
             }
         }
@@ -920,6 +933,34 @@
                 alert('Kuesioner berhasil dikirim! Terima kasih atas partisipasi Anda.');
                 window.location.href = 'halaman-utama-kuesioner.html';
             }
+        }
+
+        // MODIFIKASI: Function untuk menampilkan notifikasi
+        function showNotification(message, type = 'info') {
+            // Buat elemen toast
+            const toast = document.createElement('div');
+            toast.className = `toast align-items-center text-white bg-${type === 'warning' ? 'warning' : 'info'} border-0 position-fixed top-0 end-0 m-3`;
+            toast.style.zIndex = '9999';
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            `;
+
+            // Tambahkan ke body
+            document.body.appendChild(toast);
+
+            // Inisialisasi dan tampilkan toast
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+
+            // Hapus toast setelah ditutup
+            toast.addEventListener('hidden.bs.toast', function() {
+                document.body.removeChild(toast);
+            });
         }
 
         // Initialize

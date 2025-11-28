@@ -15,13 +15,11 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="container py-5">
-            <!-- Header Section -->
             <div class="row mb-5">
                 <div class="col-12 text-center" data-aos="fade-up">
                     <h1 class="fw-bold mb-3" style="color: var(--primary-blue);">Kuesioner Tracer Study</h1>
                     <p class="lead mb-4">Selesaikan kuesioner untuk membuka fitur-fitur keren lainnya</p>
                     
-                    <!-- Progress Section -->
                     <div class="progress-section p-4 mx-auto" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="100">
                         <div class="mb-3">
                             <h5 class="mb-1">Deny Iqbal</h5>
@@ -43,13 +41,11 @@
                 </div>
             </div>
             
-            <!-- Questionnaire Cards -->
             <div class="row mb-5">
                 <div class="col-12">
                     <h3 class="fw-bold mb-4 text-center" style="color: var(--primary-blue);" data-aos="fade-up">Daftar Kuesioner</h3>
                     
                     <div class="row g-4">
-                        <!-- Kuesioner 1 -->
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                             <div class="questionnaire-card p-4 h-100 position-relative completed">
                                 <div class="questionnaire-status">
@@ -72,7 +68,6 @@
                             </div>
                         </div>
                         
-                        <!-- Kuesioner 2 -->
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                             <div class="questionnaire-card p-4 h-100 position-relative completed">
                                 <div class="questionnaire-status">
@@ -95,7 +90,6 @@
                             </div>
                         </div>
                         
-                        <!-- Kuesioner 3 -->
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                             <div class="questionnaire-card p-4 h-100 position-relative">
                                 <div class="questionnaire-status">
@@ -118,7 +112,6 @@
                             </div>
                         </div>
                         
-                        <!-- Kuesioner 4 -->
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                             <div class="questionnaire-card p-4 h-100 position-relative">
                                 <div class="questionnaire-status">
@@ -144,14 +137,12 @@
                 </div>
             </div>
             
-            <!-- Feature Unlock Section -->
             <div class="row mb-5">
                 <div class="col-12">
                     <h3 class="fw-bold mb-4 text-center" style="color: var(--primary-blue);" data-aos="fade-up">Fitur yang Akan Terbuka</h3>
                     <p class="text-center mb-5" data-aos="fade-up">Selesaikan kuesioner bagian 1 sampai 4 untuk membuka fitur-fitur eksklusif berikut:</p>
                     
                     <div class="row g-4">
-                        <!-- Fitur 1 -->
                         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                             <div class="feature-card p-4 position-relative">
                                 <div class="text-center">
@@ -167,7 +158,6 @@
                             </div>
                         </div>
                         
-                        <!-- Fitur 2 -->
                         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                             <div class="feature-card p-4 position-relative">
                                 <div class="text-center">
@@ -183,7 +173,6 @@
                             </div>
                         </div>
                         
-                        <!-- Fitur 3 -->
                         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="feature-card p-4 position-relative feature-locked">
                                 <div class="lock-icon">
@@ -202,7 +191,6 @@
                             </div>
                         </div>
                         
-                        <!-- Fitur 4 -->
                         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                             <div class="feature-card p-4 position-relative feature-locked">
                                 <div class="lock-icon">
@@ -224,7 +212,6 @@
                 </div>
             </div>
             
-            <!-- Motivation Section -->
             <div class="row">
                 <div class="col-12">
                     <div class="text-center p-5 rounded" style="background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)); color: white;" data-aos="fade-up">

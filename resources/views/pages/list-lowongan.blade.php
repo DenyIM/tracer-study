@@ -6,7 +6,6 @@
     <title>Lowongan Kerja - Tracer Study UAD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
@@ -53,7 +52,6 @@
             font-weight: 600;
         }
         
-        /* Notification Badge */
         .notification-badge {
             position: absolute;
             top: -5px;
@@ -69,7 +67,6 @@
             justify-content: center;
         }
         
-        /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
             color: white;
@@ -90,7 +87,6 @@
             background-size: cover;
         }
         
-        /* Main Search Section */
         .search-hero {
             background: white;
             border-radius: 15px;
@@ -101,7 +97,6 @@
             z-index: 10;
         }
         
-        /* Quick Filter Section */
         .quick-filter-section {
             background: white;
             border-radius: 12px;
@@ -152,7 +147,6 @@
             font-size: 0.9rem;
         }
         
-        /* Job Card */
         .job-card {
             background: white;
             border-radius: 12px;
@@ -265,7 +259,6 @@
             transform: scale(1.1);
         }
         
-        /* Layout */
         .main-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -278,7 +271,6 @@
             margin-bottom: 30px;
         }
         
-        /* Sort Options */
         .sort-options {
             background: white;
             border-radius: 10px;
@@ -307,7 +299,6 @@
             color: var(--primary-blue);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .job-grid {
                 grid-template-columns: 1fr;
@@ -329,7 +320,6 @@
     <header class="sticky-top bg-white shadow-sm">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
-                <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
                     <img src="{{ asset('logo-tracer-study.png') }}" 
                          style="width: 150px; height: auto;" 
@@ -362,12 +352,10 @@
                     
                     <!-- Right Navigation -->
                     <div class="d-flex align-items-center">
-                        <!-- Create Post Button (Visible after Kuesioner 3) -->
                         <button class="btn btn-warning btn-sm me-2" style="display: none;">
                             <i class="fas fa-plus-circle me-1"></i> Posting
                         </button>
                         
-                        <!-- Notification Dropdown - IMPROVED -->
                         <div class="dropdown me-3">
                             <button class="btn btn-outline-secondary position-relative" type="button" 
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -465,7 +453,6 @@
 
     <!-- Main Content -->
     <div class="container main-container">
-        <!-- Search Hero -->
         <div class="search-hero" data-aos="fade-up" data-aos-delay="100">
             <div class="row g-3">
                 <div class="col-md-4">
@@ -511,7 +498,6 @@
                 </div>
             </div>
             
-            <!-- Advanced Filter (Hidden by Default) -->
             <div class="advanced-filter" id="advancedFilter">
                 <div class="row g-3">
                     <div class="col-md-6">
@@ -602,7 +588,6 @@
             </div>
         </div>
 
-        <!-- Sort Options -->
         <div class="sort-options" data-aos="fade-up" data-aos-delay="150">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
@@ -617,9 +602,7 @@
             </div>
         </div>
 
-        <!-- Job Listings -->
         <div class="job-grid">
-            <!-- Job Card 1 -->
             <div class="job-card" data-aos="fade-up" data-aos-delay="200" onclick="viewJobDetail(1)">
                 <div class="job-header">
                     <div class="d-flex justify-content-between align-items-start">
@@ -675,7 +658,6 @@
                 </div>
             </div>
 
-            <!-- Job Card 2 -->
             <div class="job-card" data-aos="fade-up" data-aos-delay="250" onclick="viewJobDetail(2)">
                 <div class="job-header">
                     <div class="d-flex justify-content-between align-items-start">
@@ -787,7 +769,6 @@
                 </div>
             </div>
 
-            <!-- Job Card 4 -->
             <div class="job-card" data-aos="fade-up" data-aos-delay="350" onclick="viewJobDetail(4)">
                 <div class="job-header">
                     <div class="d-flex justify-content-between align-items-start">
@@ -844,7 +825,6 @@
             </div>
         </div>
 
-        <!-- Load More Button -->
         <div class="text-center mb-5" data-aos="fade-up">
             <button class="btn btn-outline-primary btn-lg">
                 <i class="fas fa-redo me-2"></i> Muat Lebih Banyak Lowongan
@@ -853,10 +833,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inisialisasi AOS
         AOS.init({
             duration: 600,
             once: true,

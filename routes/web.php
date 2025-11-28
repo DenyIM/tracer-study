@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('pages.mentor');
+    return view('pages.bookmark');
 });
 
 Route::get('/nav-kuesioner', function () {

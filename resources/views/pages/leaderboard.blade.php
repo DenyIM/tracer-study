@@ -89,7 +89,6 @@
                         </div>
                     </div>
 
-                    <!-- Benefits Section -->
                     <div class="benefits-section" data-aos="fade-up">
                         <h3 class="text-center fw-bold mb-4" style="color: var(--primary-blue);">Keuntungan Menjadi Top Rank</h3>
                         <div class="row">
@@ -214,9 +213,7 @@
                     </div>
                 </div>
 
-                <!-- Submit Information Tab -->
                 <div class="tab-pane fade" id="submit" role="tabpanel">
-                    <!-- Points Information -->
                     <div class="points-info-card" data-aos="fade-up">
                         <h4 class="fw-bold mb-4" style="color: var(--primary-blue);">Cara Mendapatkan Points</h4>
                         <div class="points-item">
@@ -318,7 +315,6 @@
                                     </div>
                                 </form>
 
-                                <!-- MODIFIKASI: Success Message untuk Forum -->
                                 <div class="success-message" id="forumSuccessMessage">
                                     <i class="fas fa-check-circle fa-3x mb-3"></i>
                                     <h4 class="fw-bold mb-2">Informasi Forum Berhasil Dikirim!</h4>
@@ -393,7 +389,6 @@
                                     </div>
                                 </form>
 
-                                <!-- MODIFIKASI: Success Message untuk Lowongan Kerja -->
                                 <div class="success-message" id="jobSuccessMessage">
                                     <i class="fas fa-check-circle fa-3x mb-3"></i>
                                     <h4 class="fw-bold mb-2">Informasi Lowongan Kerja Berhasil Dikirim!</h4>

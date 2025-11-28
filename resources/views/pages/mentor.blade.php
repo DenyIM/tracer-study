@@ -251,10 +251,9 @@
     }
 }
 
-/* Profile Dropdown Styles */
 .user-avatar {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     display: flex;
@@ -335,7 +334,6 @@
     text-align: center;
 }
 
-        /* Mentorship Card Styles */
         .mentorship-card {
             background: white;
             border-radius: 12px;
@@ -369,7 +367,6 @@
             font-size: 2rem;
         }
         
-        /* Form Styles */
         .form-section {
             background: white;
             border-radius: 12px;
@@ -426,29 +423,6 @@
             margin-right: 10px;
         }
         
-        /* User Info Styles */
-        .user-info-card {
-            background: linear-gradient(135deg, var(--light-blue), #f0f8ff);
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-        
-        .user-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        /* Button Styles */
         .btn-mentor {
             background: linear-gradient(135deg, var(--accent-yellow), #ffc107);
             border: none;
@@ -465,7 +439,6 @@
             box-shadow: 0 5px 15px rgba(251, 176, 0, 0.4);
         }
         
-        /* Footer Styles */
         .footer {
             background-color: var(--primary-blue);
             color: white;
@@ -474,7 +447,6 @@
             text-align: center;
         }
         
-        /* Animation */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -485,7 +457,6 @@
             animation: pulse 2s infinite;
         }
         
-        /* Success Message */
         .success-message {
             display: none;
             background: linear-gradient(135deg, #28a745, #20c997);
@@ -496,7 +467,6 @@
             margin-top: 20px;
         }
         
-        /* Menu Selection Styles */
         .menu-selection {
             margin-bottom: 30px;
         }
@@ -547,7 +517,6 @@
     <header class="sticky-top bg-white shadow-sm">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
-                <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
                     <img src="{{ asset('logo-tracer-study.png') }}" 
                          style="width: 150px; height: auto;" 
@@ -643,7 +612,6 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="container py-5">
-            <!-- Mentorship Header -->
             <div class="mentorship-card mb-5" data-aos="fade-up">
                 <div class="mentorship-header">
                     <div class="mentorship-icon">
@@ -665,7 +633,6 @@
                 </div>
             </div>
 
-            <!-- Menu Selection -->
             <div class="menu-selection" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="fw-bold mb-4 text-center" style="color: var(--primary-blue);">Pilih Jenis Mentorship</h3>
                 <div class="row">
@@ -690,7 +657,6 @@
                 </div>
             </div>
 
-            <!-- Additional Info Section -->
             <div class="row mt-5">
                 <div class="col-md-6" data-aos="fade-right">
                     <div class="mentorship-card p-4 h-100">
@@ -724,7 +690,6 @@
                 </div>
             </div>
 
-            <!-- User Information -->
             <div class="user-info-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="row align-items-center">
                     <div class="col-md-8">
@@ -749,12 +714,10 @@
                 </div>
             </div>
 
-            <!-- Career Mentorship Form -->
             <div class="form-section" id="careerForm" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="fw-bold mb-4 text-center" style="color: var(--primary-blue);">Kuesioner Mentorship Karir</h3>
                 
                 <form id="careerMentorshipForm">
-                    <!-- Question 1 - Career Field -->
                     <div class="mb-4">
                         <label class="form-label">1. Jenis Bidang Karier yang diinginkan (Bagi yang merencanakan untuk bekerja di Perusahaan/Instansi)</label>
                         <div class="radio-group">
@@ -810,22 +773,18 @@
                         </div>
                     </div>
 
-                    <!-- Common Questions -->
-                    <!-- Question 3 -->
                     <div class="mb-4">
                         <label class="form-label">2. No WhatsApp</label>
                         <input type="tel" class="form-control" name="whatsapp" placeholder="Contoh: 6281234567890" required>
                         <div class="form-text">Pastikan nomor WhatsApp aktif untuk komunikasi dengan mentor</div>
                     </div>
 
-                    <!-- Question 4 -->
                     <div class="mb-4">
                         <label class="form-label">3. Perihal yang ingin dikonsultasikan</label>
                         <textarea class="form-control" name="consultation_topic" rows="5" placeholder="Jelaskan secara detail topik atau masalah yang ingin dikonsultasikan dengan mentor..." required></textarea>
                         <div class="form-text">Semakin detail penjelasan Anda, semakin tepat mentor yang akan kami rekomendasikan</div>
                     </div>
 
-                    <!-- Additional Information -->
                     <div class="mb-4">
                         <label class="form-label">Informasi Tambahan (Opsional)</label>
                         <textarea class="form-control" name="additional_info" rows="3" placeholder="Tambahkan informasi lain yang menurut Anda penting untuk diketahui mentor..."></textarea>
@@ -839,7 +798,6 @@
                     </div>
                 </form>
 
-                <!-- Success Message -->
                 <div class="success-message" id="careerSuccessMessage">
                     <i class="fas fa-check-circle fa-3x mb-3"></i>
                     <h4 class="fw-bold mb-2">Permintaan Mentorship Karir Berhasil Dikirim!</h4>
@@ -847,12 +805,10 @@
                 </div>
             </div>
 
-            <!-- Business Mentorship Form -->
             <div class="form-section hidden" id="businessForm" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="fw-bold mb-4 text-center" style="color: var(--primary-blue);">Kuesioner Mentorship Bisnis</h3>
                 
                 <form id="businessMentorshipForm">
-                    <!-- Question 2 - Business Type -->
                     <div class="mb-4">
                         <label class="form-label">1. Jenis Usaha yang direncanakan (Bagi yang ingin menjadi entrepreneur)</label>
                         <div class="radio-group">
@@ -892,28 +848,23 @@
                         </div>
                     </div>
 
-                    <!-- Common Questions -->
-                    <!-- Question 3 -->
                     <div class="mb-4">
                         <label class="form-label">2. No WhatsApp</label>
                         <input type="tel" class="form-control" name="whatsapp" placeholder="Contoh: 6281234567890" required>
                         <div class="form-text">Pastikan nomor WhatsApp aktif untuk komunikasi dengan mentor</div>
                     </div>
 
-                    <!-- Question 4 -->
                     <div class="mb-4">
                         <label class="form-label">3. Perihal yang ingin dikonsultasikan</label>
                         <textarea class="form-control" name="consultation_topic" rows="5" placeholder="Jelaskan secara detail topik atau masalah yang ingin dikonsultasikan dengan mentor..." required></textarea>
                         <div class="form-text">Semakin detail penjelasan Anda, semakin tepat mentor yang akan kami rekomendasikan</div>
                     </div>
 
-                    <!-- Additional Information -->
                     <div class="mb-4">
                         <label class="form-label">Informasi Tambahan (Opsional)</label>
                         <textarea class="form-control" name="additional_info" rows="3" placeholder="Tambahkan informasi lain yang menurut Anda penting untuk diketahui mentor..."></textarea>
                     </div>
 
-                    <!-- Submit Button -->
                     <div class="text-center mt-5">
                         <button type="submit" class="btn-mentor btn-lg pulse-animation">
                             <i class="fas fa-paper-plane me-2"></i> Kirim via Email
@@ -921,7 +872,6 @@
                     </div>
                 </form>
 
-                <!-- Success Message -->
                 <div class="success-message" id="businessSuccessMessage">
                     <i class="fas fa-check-circle fa-3x mb-3"></i>
                     <h4 class="fw-bold mb-2">Permintaan Mentorship Bisnis Berhasil Dikirim!</h4>
@@ -939,10 +889,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inisialisasi AOS
         AOS.init({
             duration: 800,
             once: true,

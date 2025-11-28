@@ -6,7 +6,6 @@
     <title>Sistem Informasi Tracer Study - Universitas Ahmad Dahlan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
@@ -123,7 +122,6 @@
             margin-right: 10px;
         }
 
-        /* Animasi tambahan */
         .hover-lift {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -153,14 +151,12 @@
             transition: all 0.3s ease;
         }
 
-        /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Section targets for navigation */
         section {
-            scroll-margin-top: 80px; /* Adjust based on your header height */
+            scroll-margin-top: 80px; 
         }
     </style>
 </head>
@@ -608,10 +604,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inisialisasi AOS
         AOS.init({
             duration: 800,
             once: true,
