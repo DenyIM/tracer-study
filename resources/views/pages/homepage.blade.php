@@ -422,7 +422,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-5">
+    {{-- <section class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
@@ -482,7 +482,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- FAQ Section -->
     <section class="py-5 bg-light" id="faq">

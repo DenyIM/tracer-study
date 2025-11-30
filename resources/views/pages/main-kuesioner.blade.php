@@ -9,10 +9,8 @@
 
 </head>
 <body>
-    <!-- Navigation Header -->
     @include('layouts.header')
 
-    <!-- Main Content -->
     <div class="main-content">
         <div class="container py-5">
             <div class="row mb-5">
@@ -226,7 +224,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     @include('layouts.footer')
 
 </body>
